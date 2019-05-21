@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<title>Exercicios</title>
+	</head>
+	<body>
+		<script>
+			function exibeMensagem(endereco) {
+				return (
+					'O usuário mora em ' +
+					endereco.cidade +
+					' / ' +
+					endereco.uf +
+					', no ' +
+					endereco.bairro +
+					' na ' +
+					endereco.rua +
+					' n°' +
+					endereco.numero
+				)
+			}
+
+			var endereco = {
+				rua: 'Rua dos pinheiros',
+				numero: 1293,
+				bairro: 'Centro',
+				cidade: 'São Paulo',
+				uf: 'SP'
+			}
+			console.log(exibeMensagem(endereco))
+
+			function pares(x, y) {
+				for (var i = x; i <= y; i++) {
+					if (i % 2 !== 0) {
+						console.log(i)
+					}
+				}
+			}
+
+			pares(30, 60)
+
+			function temHabilidade(skills) {
+				return skills.indexOf('Javascript') === 2
+			}
+
+			var skills = ['Javascript', 'ReactJS', 'React Native']
+			console.log(temHabilidade(skills))
+
+			function experiencia(anos) {
+				if (anos <= 1) {
+					return 'iniciante'
+				} else if (anos <= 3) {
+					return 'intermediario'
+				} else if (anos < 7) {
+					return 'avançado'
+				} else {
+					return 'jedimaster'
+				}
+			}
+
+			var anos = 5
+			console.log(experiencia(anos))
+
+			function exibeHabilidades(usuarios) {
+				for (usuario of usuarios) {
+					console.log(
+						'O ' +
+							usuario.nome +
+							' possui as habilidades: ' +
+							usuario.habilidades.join(', ')
+					)
+				}
+			}
+
+			var usuarios = [
+				{
+					nome: 'Gabriel',
+					habilidades: ['VueJS', 'Ruby on Rails', 'Elixir']
+				},
+				{
+					nome: 'Diego',
+					habilidades: ['Javascript', 'ReactJS', 'Redux']
+				}
+			]
+
+			exibeHabilidades(usuarios)
+		</script>
+	</body>
+</html>

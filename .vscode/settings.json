@@ -1,0 +1,8 @@
+{
+	"editor.tabSize": 2,
+	"prettier.useTabs": true,
+	"typescript.preferences.quoteStyle": "single",
+	"javascript.preferences.quoteStyle": "single",
+	"prettier.singleQuote": true,
+	"prettier.jsxSingleQuote": true
+}
